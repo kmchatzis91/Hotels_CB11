@@ -1,0 +1,81 @@
+<section class="search-and-filter">
+  <div class="first-row">
+    <div class="first-col">
+      <span class="fa fa-search"></span>
+      <!-- <input id="search" [(ngModel)]="SearchText" (keyup)="SearchHotelByName()" type="text" name="hotelName" placeholder="Champs Elysees, Paris..." /> -->
+      <input id="search" type="text" name="hotelName" placeholder="Champs Elysees, Paris..." />
+    </div>
+    <div class="second-col">
+      <input type="submit" value="search" />
+    </div>
+  </div>
+  <div class="second-row">
+    <div class="col first-col">
+      <i class="fa fa-calendar"></i>
+      <input id="checkInDate" placeholder="Check-In" />
+    </div>
+    <div class="col second-col">
+      <i class="fa fa-calendar"></i>
+      <input id="checkOutDate" placeholder="Check-Out" />
+    </div>
+    <div class="col">
+      <i class="fa fa-users"></i>
+      <select>
+        <option>Room 1</option>
+        <option>Room 2</option>
+        <option>Room 3</option>
+      </select>
+    </div>
+  </div>
+  <div class="third-row">
+    <div class="col first-col">
+      <div class="label">
+        <span>Price</span>
+        <span>max. $5000</span>
+      </div>
+      <input type="range" min="0" max="5000" />
+    </div>
+    <div class="col">
+      <div class="label">
+        Property Type
+      </div>
+      <select>
+        <option>⭐</option>
+        <option>⭐⭐</option>
+        <option>⭐⭐⭐</option>
+        <option>⭐⭐⭐⭐</option>
+        <option>⭐⭐⭐⭐⭐</option>
+      </select>
+    </div>
+    <div class="col">
+      <div class="label">
+        Guest Rating
+      </div>
+      <select>
+        <option>0 - 2 Ok</option>
+        <option>2 - 6 Fair</option>
+        <option>6 - 7 Good</option>
+        <option>7 - 8.5 Very Good</option>
+        <option>8.5 - 10 Excellent</option>
+      </select>
+    </div>
+    <div class="col">
+      <div class="label">
+        Hotel Location
+      </div>
+      <select>
+        <option>Paris</option>
+        <option>Marseille</option>
+        <option>Toulouse</option>
+      </select>
+    </div>
+    <div class="col">
+      <div class="label">
+        More Filters
+      </div>
+      <div>
+        <app-filters></app-filters>
+      </div>
+    </div>
+  </div>
+</section>

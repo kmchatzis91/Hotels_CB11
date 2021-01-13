@@ -1,0 +1,53 @@
+.map-and-sort {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.map-and-sort .map iframe {
+  border: solid 2px #fff;
+}
+
+.map-and-sort .sorting {
+  color: #37454d;
+  display: flex;
+  align-items: center;
+}
+
+.map-and-sort .sorting select {
+  width: 250px;
+  padding: 3px;
+  height: 45px;
+  margin: 0px 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: solid 1px #9ba2a6;
+  cursor: pointer;
+}
+
+.map-and-sort .sorting .info-icon {
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  background-color: #9ba2a6;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.map-and-sort .sorting .info-icon:hover:after {
+  content: 'Click for more info!';
+  position: absolute;
+  width: 150px;
+  top: -15px;
+  left: 50px;
+  background-color: #9ba2a6;
+  border-radius: 15px;
+  color: #fff;
+}

@@ -1,0 +1,72 @@
+<app-rating [ratingNo]="StarRating"></app-rating>
+<section class="listing-hotels" *ngFor="let hotel of AvailableHotels">
+    <div class="hotel-card">
+        <div class="photo" style="background: url('{{hotel.Thumbnail}}'); background-position: center;">
+            <i class="fa fa-heart"></i>
+            <span>1/30</span>
+        </div>
+        <div class="details">
+            <h3>{{hotel.HotelName}}</h3>
+            <div class="rating" style="display:inline;">
+                <div>
+                    <span><app-rating [ratingNo]="hotel.Rating"></app-rating></span>                 
+                    <i>Hotel</i>
+                </div>                      
+            </div>
+            <div class="location">
+                <a href="{{hotel.MapUrl}}">{{hotel.City}}</a>         
+            </div>
+            <div class="reviews" *ngFor="let guestratings of hotel.Guestrating">
+                <span class="total">{{guestratings.Num}}</span>
+                <b>{{guestratings.Txt}}</b>
+                <small>(1736 reviews)</small>
+            </div>
+            <div class="location-reviews">
+                Excellent location <small>(9.2/10)</small>
+            </div>
+        </div>
+        <div class="third-party-prices">
+            <div class="sites-and-prices">
+                <div class="highlighted">
+                    Hotel Website
+                    <strong>{{hotel.Price | currency}}</strong>
+                </div>
+                <div class="">
+                    Agoda
+                    <strong>$575</strong>
+                </div>
+                <div class="">
+                    Travelocity
+                    <strong>$708</strong>
+                </div>
+            </div>
+            <div class="more-deals">
+                <strong>More Deals From</strong>
+                <strong>$575↓</strong>
+            </div>
+        </div>
+        <div class="call-to-action">
+            <div class="price">
+                <div class="before-discount">
+                    HotelPower.com
+                    <strong><s>$1,568</s></strong>
+                </div>
+                <div class="after-discount">
+                    Travelocity
+                    <strong>$1,213</strong>
+                    <div class="total">
+                        3 nights for <strong>$3,638</strong>
+                    </div>
+                    <div class="usp">
+                        <span>Free Breakfast</span>
+                    </div>
+                </div>
+                <div class="button">
+                    <a href="#">View Deal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
